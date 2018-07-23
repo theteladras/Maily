@@ -15,28 +15,33 @@ class Header extends Component {
         );
       default:
         return [
-          <li key="payments"><Payments /></li>,
-          <li key="credit" style={{ margin: '0px 10px' }}>Credits: {this.props.auth.credits}</li>,
-          <li key="logout"><a href="/api/logout">Logout</a></li>
+          <li key="payments" style={{ margin: '0px 20px' }}><Payments /></li>,
+          <li key="credit" style={{ margin: '0px 20px' }}>Credits: {this.props.auth.credits}</li>,
+          <li key="logout" style={{ margin: '0px 20px' }}><a href="/api/logout">Logout</a></li>
         ];
     }
   }
   render() {
     console.log(this.props);
     return (
-      <nav>
-        <div className="nav-wrapper">
-          <Link 
-            to={this.props.auth ? '/surveys' : '/'} 
-            className="left brand-logo"
-          >
-            Maily
-          </Link>
-          <ul className="right">
-            { this.renderContent() }
-          </ul>
+      <header className="no-padding">
+        <div className="navbar-fixed">
+          <nav style={{ left: 0 }}>
+            <div className="nav-wrapper blue">
+              <Link 
+                to={this.props.auth ? '/surveys' : '/'} 
+                className="left brand-logo"
+                style={{ marginLeft: 10, fontSize: 36 }}
+              >
+                Maily
+              </Link>
+              <ul className="right">
+                { this.renderContent() }
+              </ul>
+            </div>
+          </nav>
         </div>
-      </nav>
+      </header>
     );
   }
 }
