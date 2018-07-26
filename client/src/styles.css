@@ -1,0 +1,97 @@
+#add-btn {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#add-btn:hover {
+  box-shadow: 3px 3px 6px rgba(50, 0, 150, 0.5);
+}
+
+#add-btn::after {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#add-btn:hover::after {
+  opacity: 1;
+}
+
+.input {
+  margin-bottom: -20px;
+}
+
+.err {
+  color: red;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 5px;
+  font-style: italic;
+}
+
+.survey-label {
+  color: rgb(11, 9, 36);
+  font-size: 20;
+}
+
+.survey-label-email {
+  color: rgb(11, 9, 36);
+  font-size: 20;
+  margin-left: 10px;
+}
+
+.input-container {
+  margin: 20px 10px;
+}
+
+
+/* Example Styles for React Tags*/
+div.ReactTags__tags {
+  position: relative;
+}
+
+/* Styles for the input */
+div.ReactTags__tagInput {
+  width: 450px;
+  border-radius: 2px;
+  display: inline-block;
+}
+::placeholder {
+  padding-left: 5px;
+}
+div.ReactTags__tagInput input.ReactTags__tagInputField,
+div.ReactTags__tagInput input.ReactTags__tagInputField:focus {
+  height: 31px;
+  margin: 0;
+  font-size: 12px;
+  border: 1px solid #eee;
+}
+
+/* Styles for selected tags */
+
+div.ReactTags__selected a.ReactTags__remove {
+  color: #aaa;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.confirm-label {
+  font-size: 24px;
+  font-style: italic;
+  margin: 5px 0px;
+  color: #444;
+}
+
+.confirm-values {
+  font-size: 28px;
+  margin: 5px 20px 20px;
+}
+
+.review-title {
+  font-size: 32px;
+  margin: 20px 0;
+  text-align: center;
+}

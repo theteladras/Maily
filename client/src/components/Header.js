@@ -22,7 +22,6 @@ class Header extends Component {
     }
   }
   render() {
-    console.log(this.props);
     return (
       <header className="no-padding">
         <div className="navbar-fixed">
