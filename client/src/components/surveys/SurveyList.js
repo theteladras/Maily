@@ -9,7 +9,7 @@ class SurveyList extends Component {
   }
 
   renderSurveys() {
-    console.log(this.props.surveys);
+    console.log(this.props.surveyRecords);
     return this.props.surveyRecords.reverse().map(survey => {
       return (
         <div className="card #e8eaf6 indigo lighten-3" key={survey._id}>
@@ -34,7 +34,7 @@ class SurveyList extends Component {
   render() {
     return (
       <div>
-        {this.props.surveyRecords !== undefined ? this.renderSurveys() : <div style={{ textAlign: 'center', fontSize: 26, marginTop: '25%' }}>There are no surveys sent yeth. To send a survey click the bottom right button.</div>}
+        {this.props.surveyRecords !== [] ? this.renderSurveys() : <div style={{ textAlign: 'center', fontSize: 26, marginTop: '25%' }}>There are no surveys sent yeth. To send a survey click the bottom right button.</div>}
       </div>
     );
   }
